@@ -3,10 +3,14 @@ import React from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css';
+import img from '../assets/images/add.jpeg'
+
+
+
 const images = [
-  { url: 'http://dummyimage.com/158x100.png/cc0000/ffffff', caption: 'Welcome to Our Site' },
+  { url: img, caption: 'Welcome to Our Site' },
   { url: 'http://dummyimage.com/128x100.png/5fa2dd/ffffff', caption: 'Explore Our Services' },
-  { url: 'http://dummyimage.com/158x100.png/cc0000/ffffff', caption: 'Join Us Today' }
+  { url: img, caption: 'Join Us Today' }
 ];
 
 const Herobanner = () => {

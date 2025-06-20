@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import Homepage from "./pages/Homepage";
 import Electronics from "./pages/Electronics";
 import MainLayout from "./layout/MainLayout";
+import PrivateRoute from "./layout/PrivateRoute";
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/home" element={<MainLayout><Homepage /></MainLayout>} />
-          <Route path="/electronics" element={<MainLayout><Electronics /></MainLayout>} />
+          <Route path="/home" element={<PrivateRoute><MainLayout><Homepage /></MainLayout></PrivateRoute>} />
+          <Route path="/electronics" element={<PrivateRoute><MainLayout><Electronics /></MainLayout></PrivateRoute>} />
 
         </Routes>
       </Router>

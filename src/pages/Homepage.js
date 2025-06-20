@@ -1,34 +1,29 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect } from "react";
+//import { useNavigate } from "react-router-dom";
 
 //import Header from '../layout/Header';
 
-import Menubar from '../components/Menubar';
-import Herobanner from '../components/Herobanner';
-import ProductSlider from '../components/ProductSlider';
+import Menubar from "../components/Menubar";
+import Herobanner from "../components/Herobanner";
+import ProductSlider from "../components/ProductSlider";
 
 const Homepage = () => {
-    const navigate =useNavigate();
+  //const navigate = useNavigate();
 
-    useEffect(()=>{
-        const token= localStorage.getItem('token')
-        if(!token){
-            navigate('/')
-        }
+  /*useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/");
+    }
+  });*/
 
-    })
-  
-  
-  
   return (
     <div>
-    
-    <Menubar/>
-    <Herobanner/>
-    <ProductSlider/>
+      <Menubar />
+      <Herobanner />
+      <ProductSlider />
+    </div>
+  );
+};
 
-  </div>
-  )
-}
-
-export default Homepage
+export default Homepage;
