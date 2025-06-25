@@ -1,0 +1,33 @@
+.filters-panel {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+
+  .filter-section {
+    margin-bottom: 20px;
+
+    h4 {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 6px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+
+      input {
+        margin-right: 5px;
+      }
+    }
+  }
+}
