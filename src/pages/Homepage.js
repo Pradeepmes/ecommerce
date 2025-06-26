@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 //import Header from '../layout/Header';
 
-import Menubar from "../components/Menubar";
+//import Menubar from "../components/Menubar";
 import Herobanner from "../components/Herobanner";
 import ProductSlider from "../components/ProductSlider";
 
@@ -19,7 +19,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <Menubar />
+      
       <Herobanner />
       <ProductSlider />
     </div>

@@ -14,6 +14,7 @@ import Homepage from "./pages/Homepage";
 import Electronics from "./pages/Electronics";
 import MainLayout from "./layout/MainLayout";
 import PrivateRoute from "./layout/PrivateRoute";
+import AddMobile from "./components/AddMobile";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<PrivateRoute><MainLayout><Homepage /></MainLayout></PrivateRoute>} />
           <Route path="/electronics" element={<PrivateRoute><MainLayout><Electronics /></MainLayout></PrivateRoute>} />
+           <Route path="/addmobile" element={<PrivateRoute><MainLayout><AddMobile /></MainLayout></PrivateRoute>} />
 
         </Routes>
       </Router>

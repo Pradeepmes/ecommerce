@@ -83,6 +83,7 @@ const Electronics = () => {
 
   return (
     <div className="electronics-page">
+       
       <aside className="filters">
         <Filter filters={filters} setFilters={setFilters} />
       </aside>
