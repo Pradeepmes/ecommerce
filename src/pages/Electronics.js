@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useContext} from "react";
 import mimage from "../assets/images/mobileone.jpeg";
 import Filter from "./Filter";
 
+import { MobileContext } from "./MobileContext";
+
 const Electronics = () => {
-  const [allData, setAllData] = useState([]);
+  //const [allData, setAllData] = useState([]);
+  const { allData } = useContext(MobileContext); // shared mobile data
   const [filteredData, setFilteredData] = useState([]);
   const [displayData, setDisplayData] = useState([]);
   const [visiblecount, setVisiblecount] = useState(5);
@@ -15,13 +18,14 @@ const Electronics = () => {
     price: { from: "", to: "" },
   });
 
-  useEffect(() => {
+  // data coming from context
+  /*useEffect(() => {
     fetch("http://localhost:5000/mobiles")
       .then((res) => res.json())
       .then((data) => {
         setAllData(data);
       });
-  }, []);
+  }, []);*/
 
   // Apply filters whenever filters or allData changes
   useEffect(() => {

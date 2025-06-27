@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import MobileList from "./MobileList";
+import { MobileContext } from "../pages/MobileContext";
 
 const AddMobile = () => {
+
+  const { allData, setAllData  } = useContext(MobileContext);
+
   const [mobileData, setMobiledata] = useState({
     mobile: "",
     brand: "",
@@ -37,6 +41,7 @@ const AddMobile = () => {
       });
 
       const data = await res.json();
+      setAllData((prev) => [...prev, data]);
       console.log("Mobile added:", data);
     } catch (error) {
       console.error("Error adding mobile:", error);
@@ -135,7 +140,7 @@ const AddMobile = () => {
           <button type="submit">Submit</button>
         </div>
       </form>
-      <MobileList />
+      <MobileList mobiledata={allData}/>
     </div>
     
   );

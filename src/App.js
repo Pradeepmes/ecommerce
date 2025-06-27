@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "./assets/styles/main.scss"
+import { MobileProvider } from "./pages/MobileContext";
 
 import {
   BrowserRouter as Router,
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       
       <Router>
+         <MobileProvider>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<PrivateRoute><MainLayout><Homepage /></MainLayout></PrivateRoute>} />
@@ -28,6 +30,7 @@ function App() {
            <Route path="/addmobile" element={<PrivateRoute><MainLayout><AddMobile /></MainLayout></PrivateRoute>} />
 
         </Routes>
+        </MobileProvider>
       </Router>
     </div>
   );
