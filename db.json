@@ -2,7 +2,7 @@
   "mobiles": [
     {
       "id": 1,
-      "mobile": "Maxwest Orbit 6200T",
+      "mobile": "Maxwest Orbit 6200gggg",
       "brand": "Maxwest",
       "price": 10000,
       "rating": 1,
@@ -61,21 +61,6 @@
       "image": "http://dummyimage.com/240x100.png/cc0000/ffffff"
     },
     {
-      "id": 8,
-      "mobile": "Micromax Canvas Xpress 2 E313",
-      "brand": "Micromax",
-      "price": 17000,
-      "rating": 4,
-      "ram_gb": 1,
-      "storage_gb": 8,
-      "screen_inch": 4.5,
-      "sim_type": "dual",
-      "discount_percent": 5,
-      "network_generation": "3G",
-      "operating_system": "Android 5.1",
-      "image": "http://dummyimage.com/214x100.png/cc0000/ffffff"
-    },
-    {
       "id": 9,
       "mobile": "Samsung E251",
       "brand": "Samsung",
@@ -91,24 +76,9 @@
       "image": "http://dummyimage.com/169x100.png/cc0000/ffffff"
     },
     {
-      "id": 10,
-      "mobile": "Motorola XOOM MZ600",
-      "brand": "Motorola",
-      "price": 19000,
-      "rating": 4.2,
-      "ram_gb": 1,
-      "storage_gb": 16,
-      "screen_inch": 10.1,
-      "sim_type": "wifi",
-      "discount_percent": 6,
-      "network_generation": "WiFi",
-      "operating_system": "Android 3.0",
-      "image": "http://dummyimage.com/109x100.png/5fa2dd/ffffff"
-    },
-    {
       "mobile": "109 830 3959",
-      "brand": "Samsung",
-      "price": "",
+      "brand": "Apple",
+      "price": "2000000",
       "rating": "",
       "ram_gb": "",
       "storage_gb": "",
@@ -118,7 +88,7 @@
       "network_generation": "",
       "operating_system": "",
       "image": "",
-      "id": 11
+      "id": 10
     }
   ]
 }
