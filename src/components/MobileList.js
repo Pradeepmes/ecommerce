@@ -38,9 +38,10 @@ const MobileList = ({ mobiledata }) => {
     }
   };
 
-  const editItem = async(item)=>{
+  const editItem = async(item,index)=>{
     console.log(item)
     seteditformdata({ ...item })
+    setEditIndex(index);
     setModalOpen(true);
   }
   const handleChange = (e) => {
@@ -58,10 +59,12 @@ const MobileList = ({ mobiledata }) => {
       });
 
       if (response.ok) {
-        const newData = [...tableData];
-        newData[editIndex] = editFormdata;
-        setTabledata(newData);
+       const updatedData = tableData.map(item =>
+        item.id === editFormdata.id ? editFormdata : item
+      );
+      setTabledata(updatedData);
         setEditIndex(null);
+        setModalOpen(false);
         console.log(`Updated item with id: ${editFormdata.id}`);
       } else {
         console.error("Failed to update on the server");
