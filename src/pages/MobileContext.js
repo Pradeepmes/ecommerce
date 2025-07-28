@@ -1,25 +1,28 @@
-import React, { createContext } from 'react'
-import { useEffect,useContext,useState } from 'react'
+// MobileContext.js
+import React, { createContext, useState, useEffect } from 'react';
 
-export const MobileContext = createContext()
+export const MobileContext = createContext();
 
-export const MobileProvider = ({children}) => {
-
+export const MobileProvider = ({ children }) => {
   const [allData, setAllData] = useState([]);
 
-  useEffect(()=>{
+  const refreshData = async () => {
+    try {
+      const res = await fetch('http://localhost:5000/mobiles');
+      const data = await res.json();
+      setAllData(data);
+    } catch (error) {
+      console.error("Failed to fetch mobiles:", error);
+    }
+  };
 
-    fetch('http://localhost:5000/mobiles')
-    .then((res)=>res.json())
-    .then((data)=>setAllData(data))
-  },[])
-
+  useEffect(() => {
+    refreshData(); // fetch on initial load
+  }, []);
 
   return (
-   <MobileContext.Provider value={{allData,setAllData}}>
-    {children}
-   </MobileContext.Provider>
-  
-  )
-}
-
+    <MobileContext.Provider value={{ allData, setAllData, refreshData }}>
+      {children}
+    </MobileContext.Provider>
+  );
+};
