@@ -39,7 +39,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<PrivateRoute><MainLayout><Homepage /></MainLayout></PrivateRoute>} />
           <Route path="/electronics" element={<PrivateRoute><MainLayout><Electronics /></MainLayout></PrivateRoute>} />
-           <Route path="/addmobile" element={<PrivateRoute><MainLayout><AddMobile /></MainLayout></PrivateRoute>} />
+          <Route path="/addmobile" element={<PrivateRoute><MainLayout><AddMobile /></MainLayout></PrivateRoute>} />
 
         </Routes>
          </Suspense>
