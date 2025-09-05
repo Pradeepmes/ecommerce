@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import Modal from './Modal'
+import { MobileContext } from "../pages/MobileContext";
 
-const MobileList = ({ mobiledata }) => {
-  const [tableData, setTabledata] = useState(mobiledata);
+const MobileList = () => {
+  const { allData, setAllData  } = useContext(MobileContext);
+  const [tableData, setTabledata] = useState(allData);
   const [editFormdata,seteditformdata] = useState({})
   const [editIndex, setEditIndex] = useState(null);
 
    const [isModalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    setTabledata(mobiledata); // sync prop with state when component mounts
-  }, [mobiledata]);
+    setTabledata(allData); // sync prop with state when component mounts
+  }, [allData]);
 
 
 

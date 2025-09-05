@@ -62,7 +62,7 @@
     },
     {
       "id": 9,
-      "mobile": "Samsung E251",
+      "mobile": "Samsung E25111",
       "brand": "Samsung",
       "price": 18000,
       "rating": 2.8,
@@ -74,21 +74,6 @@
       "network_generation": "2G",
       "operating_system": "Proprietary",
       "image": "http://dummyimage.com/169x100.png/cc0000/ffffff"
-    },
-    {
-      "mobile": "109 830 3959",
-      "brand": "Apple",
-      "price": "2000000",
-      "rating": "",
-      "ram_gb": "",
-      "storage_gb": "",
-      "screen_inch": "",
-      "sim_type": "",
-      "discount_percent": "",
-      "network_generation": "",
-      "operating_system": "",
-      "image": "",
-      "id": 10
     }
   ]
 }

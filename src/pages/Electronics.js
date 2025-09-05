@@ -6,7 +6,7 @@ import { MobileContext } from "./MobileContext";
 
 const Electronics = () => {
   //const [allData, setAllData] = useState([]);
-  const { allData,refreshData  } = useContext(MobileContext); // shared mobile data
+  const { allData ,refreshData } = useContext(MobileContext); // shared mobile data
   const [filteredData, setFilteredData] = useState([]);
   const [displayData, setDisplayData] = useState([]);
   const [visiblecount, setVisiblecount] = useState(5);
